@@ -1,0 +1,287 @@
+/* 
+==========================================
+    Responsive Stylesheet - responsive.css
+    Author: Yashas Rajanna Naidu
+    Version: 1.0
+==========================================
+*/
+
+/* ===== LARGE DESKTOPS (≥ 1200px) ===== */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+
+    .hero-title {
+        font-size: 56px;
+    }
+}
+
+/* ===== DESKTOPS (≥ 992px and < 1200px) ===== */
+@media (max-width: 1199.98px) {
+    .container {
+        max-width: 960px;
+    }
+
+    .hero-title {
+        font-size: 48px;
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+}
+
+/* ===== TABLETS (≥ 768px and < 992px) ===== */
+@media (max-width: 991.98px) {
+    .container {
+        max-width: 720px;
+    }
+
+    .hero-title {
+        font-size: 40px;
+    }
+
+    .about-content,
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-image {
+        order: -1;
+        margin-bottom: 30px;
+    }
+
+    .hero-image img {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .social-icons,
+    .hero-cta {
+        justify-content: center;
+    }
+
+    .skills-content .row {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .section-title {
+        font-size: 32px;
+    }
+
+    /* Timeline adjustments for tablet */
+    .timeline::before {
+        left: 30px;
+    }
+
+    .timeline-content {
+        width: calc(100% - 60px);
+        margin-left: 60px !important;
+        border-radius: 15px !important;
+    }
+
+    .timeline-dot {
+        left: 30px;
+    }
+
+    .timeline-date {
+        position: static;
+        text-align: left !important;
+        margin-bottom: 10px;
+        display: block;
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ===== LARGE PHONES (≥ 576px and < 768px) ===== */
+@media (max-width: 767.98px) {
+    .container {
+        max-width: 540px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+
+    .hero-title {
+        font-size: 32px;
+    }
+
+    .section-title {
+        font-size: 28px;
+    }
+
+    .hero-cta {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hero-cta .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-form {
+        padding: 25px;
+    }
+
+    .footer-links {
+        flex-wrap: wrap;
+        gap: 20px 30px;
+    }
+}
+
+/* ===== SMALL PHONES (< 576px) ===== */
+@media (max-width: 575.98px) {
+    .hero-title {
+        font-size: 28px;
+    }
+
+    .section-title {
+        font-size: 24px;
+    }
+
+    .greeting {
+        font-size: 18px;
+    }
+
+    .hero-subtitle {
+        font-size: 16px;
+    }
+
+    .about-text h3 {
+        font-size: 22px;
+    }
+
+    .project-image {
+        height: 180px;
+    }
+
+    .project-title {
+        font-size: 20px;
+    }
+
+    .timeline-content {
+        padding: 20px;
+    }
+
+    .timeline-title {
+        font-size: 18px;
+    }
+
+    .timeline-subtitle {
+        font-size: 14px;
+    }
+
+    .contact-form {
+        padding: 20px;
+    }
+
+    .footer-social {
+        flex-wrap: wrap;
+    }
+}
+
+/* ===== LANDSCAPE ORIENTATION ADJUSTMENTS ===== */
+@media (max-height: 500px) and (orientation: landscape) {
+    .hero {
+        height: auto;
+        padding: 100px 0 50px;
+    }
+
+    .hero-content {
+        flex-direction: row;
+    }
+
+    .hero-image {
+        order: 2;
+        margin-bottom: 0;
+    }
+
+    .hero-image img {
+        max-width: 200px;
+    }
+}
+
+/* ===== PRINT STYLES ===== */
+@media print {
+    body {
+        background-color: white;
+        color: black;
+    }
+
+    nav, 
+    .mobile-menu,
+    .social-icons,
+    .hero-cta,
+    #contact,
+    footer {
+        display: none !important;
+    }
+
+    .container {
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .hero {
+        height: auto;
+        padding: 20px 0;
+    }
+
+    .hero-content, 
+    .about-content,
+    .skills-content .row {
+        display: block;
+    }
+
+    .hero-image {
+        display: none;
+    }
+
+    .hero-title,
+    .section-title,
+    .project-title,
+    .timeline-title {
+        color: black;
+    }
+
+    .hero-title span::before,
+    .section-title::after {
+        display: none;
+    }
+
+    .skill-progress-bar {
+        border: 1px solid #ccc;
+    }
+
+    .skill-progress-value {
+        background-color: #333;
+    }
+
+    .project-card,
+    .timeline-content {
+        box-shadow: none;
+        border: 1px solid #ccc;
+    }
+
+    .project-tag,
+    .skill-tag {
+        border: 1px solid #ccc;
+        background: none;
+    }
+}
