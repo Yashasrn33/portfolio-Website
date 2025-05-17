@@ -278,12 +278,17 @@
           question, or just want to connect.
         </p>
         <div class="contact-form">
-          <form id="contactForm">
+          <form id="contactForm" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="contact" />
+            <p class="hidden" style="display:none">
+              <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+            </p>
             <div class="form-group">
               <label class="form-label" for="name">Name</label>
               <input
                 type="text"
                 id="name"
+                name="name"
                 class="form-control"
                 placeholder="Your Name"
                 required
@@ -294,6 +299,7 @@
               <input
                 type="email"
                 id="email"
+                name="email"
                 class="form-control"
                 placeholder="Your Email"
                 required
@@ -304,6 +310,7 @@
               <input
                 type="text"
                 id="subject"
+                name="subject"
                 class="form-control"
                 placeholder="Subject"
                 required
@@ -313,6 +320,7 @@
               <label class="form-label" for="message">Message</label>
               <textarea
                 id="message"
+                name="message"
                 class="form-control"
                 placeholder="Your Message"
                 required

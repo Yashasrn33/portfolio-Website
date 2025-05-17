@@ -27,15 +27,16 @@ function initContactForm() {
             submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
             submitButton.disabled = true;
             
-            /* Simulate form submission (replace with actual API call)
-            setTimeout(() => {
-                // Form submission success (simulate API response)
+            // Netlify form submission
+            const formData = new FormData(contactForm);
+            
+            fetch('/', {
+                method: 'POST',
+                body: formData
+            })
+            .then(() => {
                 showFormMessage(true, 'Your message has been sent successfully! I\'ll get back to you soon.');
                 contactForm.reset();
-                
-                // Restore button
-                submitButton.innerHTML = originalText;
-                submitButton.disabled = false;
                 
                 // Remove success message after 5 seconds
                 setTimeout(() => {
@@ -44,26 +45,6 @@ function initContactForm() {
                         successMessage.remove();
                     }
                 }, 5000);
-                
-            }, 1500);
-            */
-            // For actual form submission, uncomment and modify this code:
-            
-            const formData = new FormData(contactForm);
-            
-            fetch('your-api-endpoint', {
-                method: 'POST',
-                body: formData
-            })
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
-                return response.json();
-            })
-            .then(data => {
-                showFormMessage(true, 'Your message has been sent successfully! I\'ll get back to you soon.');
-                contactForm.reset();
             })
             .catch(error => {
                 showFormMessage(false, 'Oops! There was a problem sending your message. Please try again.');
