@@ -1,141 +1,70 @@
-# Portfolio Website
+# Yashas Rajanna Naidu - Portfolio Website
 
-A modern, responsive, and interactive portfolio website for Yashas Rajanna Naidu, Machine Learning Engineer and AI Specialist.
+## Overview
+
+This repository contains the source code for my personal portfolio website, showcasing my skills, projects, and professional experience in Machine Learning and AI.
 
 ## Features
 
-- **Responsive Design:** Fully responsive layout that works on all devices (mobile, tablet, desktop)
-- **Interactive Elements:** Animations, hover effects, and interactive components enhance user experience
-- **Modern UI:** Clean and modern interface with a dark theme and accent colors
-- **Performance Optimized:** Fast loading and smooth performance
-- **SEO Friendly:** Proper meta tags and semantic HTML
-- **Accessibility:** Follows web accessibility best practices
+- Responsive design that works on desktop, tablet, and mobile devices
+- Dynamic project showcase with detailed descriptions
+- Interactive skills section with categorized technical abilities
+- Timeline-based experience and education section
+- Contact form for potential collaborators or employers to reach out
+- Dark mode/light mode toggle for better user experience
 
-## Technology Stack
+## Technologies Used
 
-- HTML5
-- CSS3 (Custom properties, Flexbox, Grid)
-- Vanilla JavaScript (ES6+)
-- Font Awesome Icons
-- No external JS libraries or frameworks
+- HTML5, CSS3, JavaScript (Vanilla JS)
+- Responsive design using CSS Grid and Flexbox
+- CSS animations for enhanced user experience
+- Font Awesome for icons
+- Mobile-first approach for better responsiveness
 
-## File Structure
+## Projects Showcased
 
-```
-portfolio-website/
-│
-├── index.html                # Main HTML file
-├── assets/                   # All static assets
-│   ├── css/                  # CSS files
-│   │   ├── style.css         # Main stylesheet
-│   │   ├── responsive.css    # Responsive styles
-│   │   └── animations.css    # Animation styles
-│   ├── js/                   # JavaScript files
-│   │   ├── main.js           # Main JavaScript functionality
-│   │   ├── animations.js     # Animation scripts
-│   │   └── form-handler.js   # Contact form handler
-│   ├── img/                  # Images
-│   │   ├── profile.jpg       # Profile photo
-│   │   ├── about.jpg         # About section photo
-│   │   ├── projects/         # Project images
-│   │   │   ├── loan-prediction.jpg
-│   │   │   ├── sentiment-analysis.jpg
-│   │   │   ├── nyc-taxi.jpg
-│   │   │   ├── kisan-bandhu.jpg
-│   │   │   ├── digit-recognition.jpg
-│   │   │   └── air-canvas.jpg
-│   │   ├── favicon.ico       # Website favicon
-│   │   └── logo.svg          # Logo SVG
-│   └── docs/                 # Documents
-│       └── resume.pdf        # Downloadable resume
-│
-└── README.md                 # Project documentation
-```
+1. **Loan Approval Prediction System** - End-to-end ML system using ensemble models
+2. **Flipkart Review Analysis** - NLP-based sentiment analysis for e-commerce
+3. **NYC Taxi Fare Analysis** - Big Data project using PySpark and Databricks
+4. **Kisan Bandhu: AI Agricultural Platform** - AI platform for crop recommendations
+5. **Handwritten Digit Recognition** - Computer vision model using CNNs
+6. **Air Canvas: Gesture-Based Drawing** - Computer vision project for touchless drawing
 
-## Setup Instructions
+## How to Run Locally
 
-1. **Clone the repository:**
-
+1. Clone this repository
    ```
-   git clone https://github.com/yashasnaidu/portfolio-website.git
+   git clone https://github.com/Yashasrn33/portfolio-website.git
    ```
 
-2. **Navigate to the project directory:**
-
+2. Navigate to the project directory
    ```
    cd portfolio-website
    ```
 
-3. **Open the project:**
+3. Open `index.html` in your browser or use a local server
+   ```
+   # Using Python
+   python -m http.server 8000
+   
+   # Then open http://localhost:8000 in your browser
+   ```
 
-   - You can open the project in your code editor
-   - To view the website, open the `index.html` file in a web browser
+## Future Enhancements
 
-4. **Development:**
-   - For local development, you can use a simple local server like [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) in VS Code
-   - Make your changes to the HTML, CSS, or JavaScript files
-   - Refresh the browser to see the changes
+- Blog section to share technical articles and insights
+- Project filtering by technology/category
+- Integration with GitHub API to show live repositories
+- Dark/Light theme toggle
+- Performance optimizations and SEO improvements
 
-## Deployment
+## Contact
 
-The website can be deployed to various hosting platforms:
-
-1. **GitHub Pages:**
-
-   - Push the repository to GitHub
-   - Go to Settings > Pages
-   - Select the main branch as the source
-   - The site will be available at `https://yourusername.github.io/portfolio-website/`
-
-2. **Netlify:**
-
-   - Connect your GitHub repository to Netlify
-   - Configure the build settings (not needed for this project)
-   - The site will be deployed automatically
-
-3. **Vercel:**
-   - Connect your GitHub repository to Vercel
-   - Configure the project settings
-   - The site will be deployed automatically
-
-## Customization
-
-To customize the portfolio for your own use:
-
-1. **Update Personal Information:**
-
-   - Edit the text content in `index.html`
-   - Replace the project information in the JavaScript data arrays in `main.js`
-   - Update the timeline information in `main.js`
-
-2. **Replace Images:**
-
-   - Replace the profile and about images
-   - Add your own project images
-
-3. **Update Colors and Styles:**
-
-   - Modify the custom properties in `style.css` to change the color scheme
-   - Adjust spacing, typography, and other styles as needed
-
-4. **Add/Remove Sections:**
-   - Customize the sections based on your needs
-   - Update the navigation links accordingly
-
-## Browser Support
-
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-- Opera (latest)
+Feel free to reach out to me at:
+- Email: rajannanaidu.y@northeastern.edu
+- LinkedIn: [linkedin.com/in/yashasrn33](https://www.linkedin.com/in/yashasrn33/)
+- GitHub: [github.com/Yashasrn33](https://github.com/Yashasrn33)
 
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
-
-## Contact
-
-Yashas Rajanna Naidu - [rajannanaidu.y@northeastern.edu](mailto:rajannanaidu.y@northeastern.edu)
-
-Project Link: [https://github.com/yashasnaidu/portfolio-website](https://github.com/yashasnaidu/portfolio-website)

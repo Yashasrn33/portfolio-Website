@@ -26,12 +26,19 @@
       rel="stylesheet"
     />
 
+    <!-- Three.js for background animation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+
     <!-- CSS Files -->
     <link rel="stylesheet" href="./assets/css/style.css" />
     <link rel="stylesheet" href="./assets/css/animations.css" />
     <link rel="stylesheet" href="./assets/css/responsive.css" />
   </head>
   <body>
+    <!-- Dynamic Background -->
+    <div id="vanta-background" class="vanta-background"></div>
+    
     <!-- Navigation -->
     <nav id="navbar">
       <div class="container nav-container">
@@ -73,21 +80,21 @@
           <div class="hero-cta fade-in delay-3">
             <a href="#projects" class="btn btn-primary">View My Work</a>
             <a
-              href="./assets/docs/resume.pdf"
-              class="btn btn-outline"
+              href="https://drive.google.com/file/d/1WBrbiShip3Zh2WXHHh95_zqC0VM5L5GM/view?usp=sharing"
+              class="btn btn-outline cv-button"
               target="_blank"
-              >Download CV</a
+              ><i class="fas fa-file-alt"></i> View CV</a
             >
           </div>
           <div class="social-icons fade-in delay-4">
             <a
-              href="https://github.com/yashasnaidu"
+              href="https://github.com/Yashasrn33"
               target="_blank"
               aria-label="GitHub"
               ><i class="fab fa-github"></i
             ></a>
             <a
-              href="https://www.linkedin.com/in/yashas-rajanna-naidu/"
+              href="https://www.linkedin.com/in/yashasrn33/"
               target="_blank"
               aria-label="LinkedIn"
               ><i class="fab fa-linkedin"></i
@@ -130,7 +137,8 @@
               My experience ranges from predictive modeling and natural language
               processing to deep learning and big data analytics. I'm passionate
               about leveraging technology to create impactful solutions across
-              various domains.
+              various domains including finance, agriculture, and
+              transportation.
             </p>
             <p>
               When I'm not coding, you can find me exploring new technologies,
@@ -161,81 +169,73 @@
           Here are some of the technologies and tools I've been working with.
         </p>
         <div class="skills-content">
-          <div class="row">
-            <div class="col">
-              <div class="skill-progress">
-                <div class="skill-progress-label">
-                  <span>Python</span>
-                  <span>95%</span>
-                </div>
-                <div class="skill-progress-bar">
-                  <div class="skill-progress-value" style="width: 95%"></div>
-                </div>
-              </div>
-              <div class="skill-progress">
-                <div class="skill-progress-label">
-                  <span>Machine Learning</span>
-                  <span>90%</span>
-                </div>
-                <div class="skill-progress-bar">
-                  <div class="skill-progress-value" style="width: 90%"></div>
-                </div>
-              </div>
-              <div class="skill-progress">
-                <div class="skill-progress-label">
-                  <span>TensorFlow/Keras</span>
-                  <span>85%</span>
-                </div>
-                <div class="skill-progress-bar">
-                  <div class="skill-progress-value" style="width: 85%"></div>
-                </div>
-              </div>
-              <div class="skill-progress">
-                <div class="skill-progress-label">
-                  <span>PyTorch</span>
-                  <span>80%</span>
-                </div>
-                <div class="skill-progress-bar">
-                  <div class="skill-progress-value" style="width: 80%"></div>
-                </div>
+          <div class="skills-categories">
+            <div class="skill-category">
+              <h3>Languages</h3>
+              <div class="skill-tags">
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">Java</span>
+                <span class="skill-tag">C++</span>
+                <span class="skill-tag">SQL</span>
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">CSS</span>
               </div>
             </div>
-            <div class="col">
-              <div class="skill-progress">
-                <div class="skill-progress-label">
-                  <span>Data Analysis</span>
-                  <span>90%</span>
-                </div>
-                <div class="skill-progress-bar">
-                  <div class="skill-progress-value" style="width: 90%"></div>
-                </div>
+
+            <div class="skill-category">
+              <h3>Machine Learning</h3>
+              <div class="skill-tags">
+                <span class="skill-tag">Regression</span>
+                <span class="skill-tag">Classification</span>
+                <span class="skill-tag">Clustering</span>
+                <span class="skill-tag">NLP</span>
+                <span class="skill-tag">Deep Learning</span>
               </div>
-              <div class="skill-progress">
-                <div class="skill-progress-label">
-                  <span>Natural Language Processing</span>
-                  <span>85%</span>
-                </div>
-                <div class="skill-progress-bar">
-                  <div class="skill-progress-value" style="width: 85%"></div>
-                </div>
+            </div>
+
+            <div class="skill-category">
+              <h3>Libraries</h3>
+              <div class="skill-tags">
+                <span class="skill-tag">Scikit-learn</span>
+                <span class="skill-tag">TensorFlow</span>
+                <span class="skill-tag">Keras</span>
+                <span class="skill-tag">PyTorch</span>
+                <span class="skill-tag">NumPy</span>
+                <span class="skill-tag">Pandas</span>
               </div>
-              <div class="skill-progress">
-                <div class="skill-progress-label">
-                  <span>Computer Vision</span>
-                  <span>80%</span>
-                </div>
-                <div class="skill-progress-bar">
-                  <div class="skill-progress-value" style="width: 80%"></div>
-                </div>
+            </div>
+
+            <div class="skill-category">
+              <h3>Data Technologies</h3>
+              <div class="skill-tags">
+                <span class="skill-tag">Apache Spark</span>
+                <span class="skill-tag">Hadoop</span>
+                <span class="skill-tag">MySQL</span>
+                <span class="skill-tag">PostgreSQL</span>
+                <span class="skill-tag">SQLite</span>
               </div>
-              <div class="skill-progress">
-                <div class="skill-progress-label">
-                  <span>Big Data (Spark, Hadoop)</span>
-                  <span>75%</span>
-                </div>
-                <div class="skill-progress-bar">
-                  <div class="skill-progress-value" style="width: 75%"></div>
-                </div>
+            </div>
+
+            <div class="skill-category">
+              <h3>Cloud Platforms</h3>
+              <div class="skill-tags">
+                <span class="skill-tag">Google Cloud Platform</span>
+                <span class="skill-tag">Microsoft Azure</span>
+                <span class="skill-tag">Databricks</span>
+              </div>
+            </div>
+
+            <div class="skill-category">
+              <h3>Tools</h3>
+              <div class="skill-tags">
+                <span class="skill-tag">Docker</span>
+                <span class="skill-tag">Flask</span>
+                <span class="skill-tag">FastAPI</span>
+                <span class="skill-tag">Git</span>
+                <span class="skill-tag">Jupyter</span>
+                <span class="skill-tag">Power BI</span>
+                <span class="skill-tag">Tableau</span>
+                <span class="skill-tag">Linux</span>
               </div>
             </div>
           </div>
@@ -263,7 +263,7 @@
         <p class="section-subtitle">
           My professional journey and educational background.
         </p>
-        <div class="timeline">
+        <div class="timeline timeline-fixed">
           <!-- Timeline content will be loaded dynamically from timeline.js -->
         </div>
       </div>
@@ -339,13 +339,13 @@
         </div>
         <div class="footer-social">
           <a
-            href="https://github.com/yashasnaidu"
+            href="https://github.com/Yashasrn33"
             target="_blank"
             aria-label="GitHub"
             ><i class="fab fa-github"></i
           ></a>
           <a
-            href="https://www.linkedin.com/in/yashas-rajanna-naidu/"
+            href="https://www.linkedin.com/in/yashasrn33/"
             target="_blank"
             aria-label="LinkedIn"
             ><i class="fab fa-linkedin"></i
@@ -368,5 +368,27 @@
     <script src="./assets/js/main.js"></script>
     <script src="./assets/js/animations.js"></script>
     <script src="./assets/js/form-handler.js"></script>
+    
+    <!-- Dynamic Background Script -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // Initialize VANTA background
+        VANTA.NET({
+          el: "#vanta-background",
+          mouseControls: true,
+          touchControls: true,
+          gyroControls: false,
+          minHeight: 200.00,
+          minWidth: 200.00,
+          scale: 1.00,
+          scaleMobile: 1.00,
+          color: 0x3A86FF,
+          backgroundColor: 0x1A1A2E,
+          points: 10.00,
+          maxDistance: 25.00,
+          spacing: 16.00
+        });
+      });
+    </script>
   </body>
 </html>

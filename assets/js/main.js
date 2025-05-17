@@ -182,63 +182,45 @@ function populateProjects() {
     const projects = [
         {
             title: "Loan Approval Prediction System",
-            image: "./assets/img/projects/loan-prediction.jpg",
-            description: "Built an end-to-end loan approval system with 92% accuracy using Ensemble Models. Implemented Recursive Feature Elimination (RFE) to identify key financial indicators.",
+            image: "./assets/img/projects/loan-prediction.png",
+            description: "Built an end-to-end loan approval system with 92% accuracy using Ensemble Models (Logistic Regression, Random Forest). Implemented Recursive Feature Elimination (RFE) to identify key financial indicators.",
             tags: ["Machine Learning", "Python", "Flask"],
-            github: "https://github.com/yashasnaidu/loan-prediction",
-            demo: "#",
-            demoIcon: "fas fa-external-link-alt",
-            demoText: "Live Demo"
+            github: "https://github.com/Yashasrn33/Loan_Approval_prediction"
         },
         {
-            title: "Flipkart Sentiment Analysis",
-            image: "./assets/img/projects/sentiment-analysis.jpg",
-            description: "Analyzed 100K+ product reviews from Flipkart's e-commerce platform. Achieved 89% classification accuracy using BERT fine-tuning for Indian context.",
-            tags: ["NLP", "BERT", "PyTorch"],
-            github: "https://github.com/yashasnaidu/flipkart-sentiment",
-            demo: "#",
-            demoIcon: "fas fa-external-link-alt",
-            demoText: "Live Demo"
+            title: "Flipkart Review Analysis",
+            image: "./assets/img/projects/sentiment-analysis.png",
+            description: "Analyzed 100K+ product reviews from Flipkart's e-commerce platform. Achieved 89% classification accuracy using fine-tuned NLP models for Indian e-commerce context.",
+            tags: ["NLP", "Python", "Sentiment Analysis"],
+            github: "https://github.com/Yashasrn33/flipkart-review-analysis"
         },
         {
-            title: "NYC Taxi Fare Analysis",
-            image: "./assets/img/projects/nyc-taxi.jpg",
-            description: "Processed 3.2M+ NYC taxi records using Apache Spark. Developed and tuned a PySpark Linear Regression model (RMSE: 5.2, R²: 0.68) for fare prediction.",
+            title: "NYC Taxi Fare Analysis Using Big Data",
+            image: "./assets/img/projects/nyc-taxi.png",
+            description: "Processed 3.2M+ NYC taxi records using PySpark on Databricks. Developed fare prediction model achieving RMSE of 5.2. Created dashboards with Spark SQL and Matplotlib for transit insights.",
             tags: ["Big Data", "PySpark", "Databricks"],
-            github: "https://github.com/yashasnaidu/nyc-taxi-fare-analysis",
-            demo: "#",
-            demoIcon: "fas fa-chart-bar",
-            demoText: "View Dashboard"
+            github: "https://github.com/Yashasrn33/Taxi_Fare_Big_Data"
         },
         {
             title: "Kisan Bandhu: AI Agricultural Platform",
-            image: "./assets/img/projects/kisan-bandhu.jpg",
-            description: "Developed a Flask-based AI web platform to predict crop yield and provide fertilizer recommendations. Improved crop yield prediction accuracy by 25% for 200+ farmers.",
-            tags: ["AI", "Flask", "Agriculture"],
-            github: "https://github.com/yashasnaidu/kisan-bandhu",
-            demo: "#",
-            demoIcon: "fas fa-external-link-alt",
-            demoText: "Live Demo"
+            image: "./assets/img/projects/kisan-bandhu.png",
+            description: "Developed an AI platform to recommend crops and fertilizers using Regression models. Improved forecast accuracy by 25% and supported 200+ farmers with peer-based insights. Integrated weather API for real-time suggestions.",
+            tags: ["AI", "Agriculture", "SQLite"],
+            github: "https://github.com/Yashasrn33/Agriculture_dashboard"
         },
         {
             title: "Handwritten Digit Recognition",
-            image: "./assets/img/projects/digit-recognition.jpg",
-            description: "Designed a CNN classifier using TensorFlow and Keras on the MNIST dataset, achieving 95% accuracy. Deployed as a RESTful web app using Flask and Docker.",
+            image: "./assets/img/projects/digit-recognition.png",
+            description: "Built CNN classifier achieving 93% accuracy on MNIST using TensorFlow and Keras. Deployed as web app using Flask and Docker. Reduced input errors by 40% with OpenCV preprocessing.",
             tags: ["Deep Learning", "TensorFlow", "Computer Vision"],
-            github: "https://github.com/yashasnaidu/digit-recognition",
-            demo: "#",
-            demoIcon: "fas fa-external-link-alt",
-            demoText: "Live Demo"
+            github: "https://github.com/Yashasrn33/Handwritten_DigitRecognition"
         },
         {
             title: "Air Canvas: Gesture-Based Drawing",
-            image: "./assets/img/projects/air-canvas.jpg",
-            description: "Built an OpenCV-based virtual drawing tool with real-time hand gesture tracking. Implemented dynamic HSV color space filtering improving gesture recognition by 30%.",
+            image: "./assets/img/projects/air-canvas.png",
+            description: "Created touchless drawing tool with real-time hand tracking. Implemented HSV color filtering for 30% better gesture recognition. Supports interactive learning and creative sketching without touch input.",
             tags: ["Computer Vision", "OpenCV", "Python"],
-            github: "https://github.com/yashasnaidu/air-canvas",
-            demo: "#",
-            demoIcon: "fas fa-video",
-            demoText: "View Demo"
+            github: "https://github.com/Yashasrn33/Air-Canvas"
         }
     ];
     
@@ -268,11 +250,8 @@ function populateProjects() {
                     ${project.description}
                 </p>
                 <div class="project-links">
-                    <a href="${project.github}" target="_blank">
+                    <a href="${project.github}" target="_blank" class="github-link">
                         <i class="fab fa-github"></i> View Code
-                    </a>
-                    <a href="${project.demo}" target="_blank">
-                        <i class="${project.demoIcon}"></i> ${project.demoText}
                     </a>
                 </div>
             </div>
@@ -290,31 +269,31 @@ function populateTimeline() {
     
     if (!timeline) return;
     
-    // Timeline data array
+    // Timeline data array - removed projects, keeping only education and professional experience
     const timelineItems = [
         {
-            date: "2024 - 2026",
+            date: "Sep 2024 - Jun 2026",
             title: "Northeastern University",
             subtitle: "Master's in Applied Machine Intelligence",
             description: "Currently pursuing a graduate degree in Applied Machine Intelligence with a focus on advanced ML techniques, natural language processing, and computer vision. GPA: 3.94"
         },
         {
-            date: "2020 - 2024",
+            date: "Dec 2020 - May 2024",
             title: "Bangalore Institute of Technology",
             subtitle: "Bachelor of Engineering in AI & ML",
             description: "Completed undergraduate studies in Artificial Intelligence and Machine Learning with coursework in data structures, algorithms, machine learning, deep learning, and software engineering."
         },
         {
-            date: "Aug 2023 - Nov 2023",
+            date: "Jul 2023 - Sep 2023",
             title: "Machine Learning Intern",
             subtitle: "Prinston Smart Engineers",
-            description: "• Improved loan approval accuracy by 20% using Recursive Feature Elimination (RFE) and ML models<br>• Streamlined data preprocessing with NumPy, Pandas, and Seaborn, increasing efficiency by 30%<br>• Automated model deployment using Docker and Flask for seamless backend integration"
+            description: "• Increased loan approval accuracy by 20% using Recursive Feature Elimination (RFE) and ensemble models<br>• Reduced data processing time by 30% with Pandas, NumPy and Seaborn<br>• Integrated Dockerized Flask API, cutting backend deployment effort by 40%<br>• Deployed scalable ML system that minimized processing delays and reduced default risk"
         },
         {
             date: "Jan 2024 - Apr 2024",
             title: "Research & Publication",
-            subtitle: "Integrated ML-driven Agricultural Technology Platform",
-            description: "Authored a research paper on personalized agricultural recommendations, resource management, and market participation using machine learning techniques. Currently in manuscript preparation for publication."
+            subtitle: "IJIRT Manuscript",
+            description: "Authored research paper 'Integrated ML-driven Agricultural Technology Platform for Personalized Recommendations, Resource Management, Market Participation' using machine learning techniques. <a href='https://ijirt.org/Article?manuscript=164583' target='_blank' class='publication-link'>View Publication <i class='fas fa-external-link-alt'></i></a>"
         }
     ];
     

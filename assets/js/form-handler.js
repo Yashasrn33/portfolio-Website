@@ -27,7 +27,7 @@ function initContactForm() {
             submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
             submitButton.disabled = true;
             
-            // Simulate form submission (replace with actual API call)
+            /* Simulate form submission (replace with actual API call)
             setTimeout(() => {
                 // Form submission success (simulate API response)
                 showFormMessage(true, 'Your message has been sent successfully! I\'ll get back to you soon.');
@@ -46,7 +46,7 @@ function initContactForm() {
                 }, 5000);
                 
             }, 1500);
-            
+            */
             // For actual form submission, uncomment and modify this code:
             
             const formData = new FormData(contactForm);

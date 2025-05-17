@@ -7,58 +7,40 @@
 // Wait for the DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize animations
-    initParticles();
     initTypeWriterEffect();
     initScrollAnimations();
     initHoverEffects();
+    initBackgroundEffects();
 });
 
 /**
- * Initialize particles animation in the hero section
+ * Initialize background interaction effects
  */
-function initParticles() {
-    // Add particles container to the hero section
-    const hero = document.querySelector('.hero');
-    if (!hero) return;
+function initBackgroundEffects() {
+    // Add subtle parallax effect to the background based on mouse movement
+    document.addEventListener('mousemove', function(e) {
+        const mouseX = e.clientX / window.innerWidth;
+        const mouseY = e.clientY / window.innerHeight;
+        
+        // Apply subtle movement to sections based on mouse position
+        document.querySelectorAll('section').forEach(section => {
+            const sectionDepth = section.getAttribute('data-depth') || 0.05;
+            const moveX = mouseX * sectionDepth * 50;
+            const moveY = mouseY * sectionDepth * 50;
+            section.style.transform = `translate(${moveX}px, ${moveY}px)`;
+        });
+    });
     
-    const particlesContainer = document.createElement('div');
-    particlesContainer.className = 'particles-container';
-    hero.appendChild(particlesContainer);
-    
-    // Create particle elements
-    for (let i = 0; i < 50; i++) {
-        createParticle(particlesContainer);
-    }
-}
-
-/**
- * Create a single particle element
- * @param {HTMLElement} container - The container for particles
- */
-function createParticle(container) {
-    const particle = document.createElement('div');
-    particle.className = 'particle';
-    
-    // Random size between 2px and 5px
-    const size = Math.random() * 3 + 2;
-    particle.style.width = `${size}px`;
-    particle.style.height = `${size}px`;
-    
-    // Random position
-    particle.style.left = `${Math.random() * 100}%`;
-    particle.style.top = `${Math.random() * 100}%`;
-    
-    // Random opacity
-    particle.style.opacity = Math.random() * 0.5 + 0.1;
-    
-    // Random animation duration between 10s and 30s
-    const duration = Math.random() * 20 + 10;
-    particle.style.animationDuration = `${duration}s`;
-    
-    // Random animation delay
-    particle.style.animationDelay = `${Math.random() * 5}s`;
-    
-    container.appendChild(particle);
+    // Add depth to containers on scroll
+    window.addEventListener('scroll', function() {
+        const scrolled = window.scrollY;
+        
+        document.querySelectorAll('.section .container').forEach((container, index) => {
+            const speed = 0.03;
+            const yPos = -(scrolled * speed * (index + 1) % 15);
+            container.style.transform = `translateY(${yPos}px)`;
+        });
+    });
 }
 
 /**
@@ -163,20 +145,34 @@ function initScrollAnimations() {
     document.querySelectorAll('.skill-progress-value').forEach(element => {
         skillObserver.observe(element);
     });
+    
+    // Add data-depth attributes to sections for parallax effect
+    document.querySelectorAll('section').forEach((section, index) => {
+        section.setAttribute('data-depth', (0.05 + (index * 0.01)).toString());
+    });
 }
 
 /**
  * Initialize hover effects for interactive elements
  */
 function initHoverEffects() {
-    // Project cards hover effect
+    // Project cards hover effect with 3D tilt
     document.querySelectorAll('.project-card').forEach(card => {
-        card.addEventListener('mouseenter', function() {
-            this.classList.add('hover');
+        card.addEventListener('mousemove', function(e) {
+            const rect = this.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            // Calculate tilt values
+            const tiltX = (y / rect.height - 0.5) * 10;
+            const tiltY = (x / rect.width - 0.5) * -10;
+            
+            // Apply tilt effect
+            this.style.transform = `perspective(1000px) rotateX(${tiltX}deg) rotateY(${tiltY}deg) translateY(-5px)`;
         });
         
         card.addEventListener('mouseleave', function() {
-            this.classList.remove('hover');
+            this.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(0)';
         });
     });
     
@@ -204,19 +200,17 @@ function initHoverEffects() {
             this.style.setProperty('--y', `${y}px`);
         });
     });
-}
-
-/**
- * Add parallax effect to elements
- */
-function initParallaxEffect() {
-    window.addEventListener('scroll', function() {
-        const scrolled = window.pageYOffset;
+    
+    // Skill category hover effect
+    document.querySelectorAll('.skill-category').forEach(category => {
+        category.addEventListener('mouseenter', function() {
+            // Add glow effect
+            this.classList.add('glow');
+        });
         
-        // Apply parallax to selected elements
-        document.querySelectorAll('.parallax').forEach(element => {
-            const speed = element.getAttribute('data-speed') || 0.5;
-            element.style.transform = `translateY(${scrolled * speed}px)`;
+        category.addEventListener('mouseleave', function() {
+            // Remove glow effect
+            this.classList.remove('glow');
         });
     });
 }
