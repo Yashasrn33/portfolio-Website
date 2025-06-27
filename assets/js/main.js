@@ -272,10 +272,22 @@ function populateTimeline() {
     // Timeline data array - removed projects, keeping only education and professional experience
     const timelineItems = [
         {
+            date: "Apr 2025 - Jul 2025",
+            title: "Backend Developer",
+            subtitle: "Careescapes AI",
+            description: " Developed a secure, role-based backend system for a clinic management platform using FastAPI, PostgreSQL, and Clerk Auth. Collaborated in an agile team to integrate APIs with a Next.js frontend, improving admin task efficiency by 40% and reducing unauthorized access by 50%. "
+        },
+        {
             date: "Sep 2024 - Jun 2026",
             title: "Northeastern University",
             subtitle: "Master's in Applied Machine Intelligence",
-            description: "Currently pursuing a graduate degree in Applied Machine Intelligence with a focus on advanced ML techniques, natural language processing, and computer vision. GPA: 3.94"
+            description: "Currently pursuing a graduate degree in Applied Machine Intelligence with a focus on advanced ML techniques, natural language processing, and computer vision. GPA: 3.93"
+        },
+        {
+            date: "Jul 2023 - Sep 2023",
+            title: "Machine Learning Intern",
+            subtitle: "Prinston Smart Engineers",
+            description: " Built and deployed a credit risk prediction model using RFE and feature engineering, integrated via a Dockerized Flask API. Worked with cross-functional teams to enhance loan approval accuracy by 20% and reduce model iteration time by 30%."
         },
         {
             date: "Dec 2020 - May 2024",
@@ -283,12 +295,7 @@ function populateTimeline() {
             subtitle: "Bachelor of Engineering in AI & ML",
             description: "Completed undergraduate studies in Artificial Intelligence and Machine Learning with coursework in data structures, algorithms, machine learning, deep learning, and software engineering."
         },
-        {
-            date: "Jul 2023 - Sep 2023",
-            title: "Machine Learning Intern",
-            subtitle: "Prinston Smart Engineers",
-            description: "• Increased loan approval accuracy by 20% using Recursive Feature Elimination (RFE) and ensemble models<br>• Reduced data processing time by 30% with Pandas, NumPy and Seaborn<br>• Integrated Dockerized Flask API, cutting backend deployment effort by 40%<br>• Deployed scalable ML system that minimized processing delays and reduced default risk"
-        },
+        
         {
             date: "Jan 2024 - Apr 2024",
             title: "Research & Publication",
