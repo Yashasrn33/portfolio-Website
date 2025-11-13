@@ -181,46 +181,39 @@ function populateProjects() {
     // Project data array
     const projects = [
         {
-            title: "Loan Approval Prediction System",
-            image: "./assets/img/projects/loan-prediction.png",
-            description: "Built an end-to-end loan approval system with 92% accuracy using Ensemble Models (Logistic Regression, Random Forest). Implemented Recursive Feature Elimination (RFE) to identify key financial indicators.",
-            tags: ["Machine Learning", "Python", "Flask"],
-            github: "https://github.com/Yashasrn33/Loan_Approval_prediction"
+            title: "RPGAI - Real-Time Voice-Enabled NPC Dialogue Engine",
+            image: "./assets/img/projects/RPGAI.png",
+            description: "Created a full-stack system enabling live voice interaction in Unity games by integrating FastAPI, WebSocket streaming, Google Gemini, GCP Speech-to-Text/TTS, and memory-aware NPC behaviour.",
+            tags: ["FastAPI","WebSockets","Pydantic","SQLite","Google Gemini","Docker","GCP STT/TTS"],
+            github: "https://github.com/Yashasrn33/RPGAI"
         },
         {
-            title: "Flipkart Review Analysis",
-            image: "./assets/img/projects/sentiment-analysis.png",
-            description: "Analyzed 100K+ product reviews from Flipkart's e-commerce platform. Achieved 89% classification accuracy using fine-tuned NLP models for Indian e-commerce context.",
-            tags: ["NLP", "Python", "Sentiment Analysis"],
-            github: "https://github.com/Yashasrn33/flipkart-review-analysis"
+            title: "NFL Game Analytics & Prediction Platform",
+            image: "./assets/img/projects/NFL.png",
+            description: "Engineered a pipeline to ingest and analyse large-scale NFL play-by-play data, build predictive models for game outcomes, and visualise team and player performance trends.",
+            tags: ["Pydantic","PostgreSQL","SQLAlchemy","Meteostat","LightGBM","XGBoost","scikit-learn","matplotlib","seaborn","Docker"],
+            github: "https://github.com/Yashasrn33/NFL-Weekly-player-Projections-DFS-Lineup-Optimizer"
         },
         {
-            title: "NYC Taxi Fare Analysis Using Big Data",
-            image: "./assets/img/projects/nyc-taxi.png",
-            description: "Processed 3.2M+ NYC taxi records using PySpark on Databricks. Developed fare prediction model achieving RMSE of 5.2. Created dashboards with Spark SQL and Matplotlib for transit insights.",
-            tags: ["Big Data", "PySpark", "Databricks"],
-            github: "https://github.com/Yashasrn33/Taxi_Fare_Big_Data"
+            title: "Financial Analyst AI Assistant (RAG)",
+            image: "./assets/img/projects/FinBot.png",
+            description: "Developed an LLM-based chatbot that automatically extracts insights from SEC 10-K filings and enables real-time Q&A with vector search and citation support, reducing research time by over 60%.",
+            tags: ["LangChain","ChromaDB","FinBERT","MiniLM Embeddings","Claude","Mistral","Python","Vector Search"],
+            github: "https://github.com/Yashasrn33/Finance-bot"
         },
         {
-            title: "Kisan Bandhu: AI Agricultural Platform",
+            title: "Crop Yield & Fertiliser Optimisation Platform",
             image: "./assets/img/projects/kisan-bandhu.png",
-            description: "Developed an AI platform to recommend crops and fertilizers using Regression models. Improved forecast accuracy by 25% and supported 200+ farmers with peer-based insights. Integrated weather API for real-time suggestions.",
-            tags: ["AI", "Agriculture", "SQLite"],
+            description: "Built a web-based AI tool for 200+ farmers that delivers yield predictions (25% accuracy improvement) and fertiliser recommendations by integrating regression models with live environmental data.",
+            tags: ["Flask","SQLite","Python","Regression Models","Real-time Environmental APIs"],
             github: "https://github.com/Yashasrn33/Agriculture_dashboard"
         },
         {
-            title: "Handwritten Digit Recognition",
-            image: "./assets/img/projects/digit-recognition.png",
-            description: "Built CNN classifier achieving 93% accuracy on MNIST using TensorFlow and Keras. Deployed as web app using Flask and Docker. Reduced input errors by 40% with OpenCV preprocessing.",
-            tags: ["Deep Learning", "TensorFlow", "Computer Vision"],
-            github: "https://github.com/Yashasrn33/Handwritten_DigitRecognition"
-        },
-        {
-            title: "Air Canvas: Gesture-Based Drawing",
-            image: "./assets/img/projects/air-canvas.png",
-            description: "Created touchless drawing tool with real-time hand tracking. Implemented HSV color filtering for 30% better gesture recognition. Supports interactive learning and creative sketching without touch input.",
-            tags: ["Computer Vision", "OpenCV", "Python"],
-            github: "https://github.com/Yashasrn33/Air-Canvas"
+            title: "NYC Taxi Fare Prediction (Big Data)",
+            image: "./assets/img/projects/nyc-taxi.png",
+            description: "Processed 3.2 M+ taxi trip records on Databricks/Spark, then trained a PySpark regression model (RMSE 5.2, R² 0.68) and visualised fare patterns to support urban mobility analytics.",
+            tags: ["PySpark","Databricks","Python","Spark SQL","Matplotlib","Big Data Processing"],
+            github: "https://github.com/Yashasrn33/Taxi_Fare_Big_Data"
         }
     ];
     
@@ -272,22 +265,34 @@ function populateTimeline() {
     // Timeline data array - removed projects, keeping only education and professional experience
     const timelineItems = [
         {
+            date: "Sep 2025 - Present",
+            title: "Data Engineer & AI Developer",
+            subtitle: "Intelligent DataWorks (IDW)",
+            description: "Developed a cloud-native AI platform that streamlined HR workflows - from job posting to candidate screening using microservices, vector search, and real-time analytics."
+        },
+        {
+            date: "Jul 2025 - Present",
+            title: "Founding Engineer",
+            subtitle: "EnVibe",
+            description: " Engineered an emotionally-intelligent relationship assistant, building the backend, data pipelines, and LLM-powered conversational system from scratch while collaborating across product, design, and growth teams. "
+        },
+        {
             date: "Apr 2025 - Jul 2025",
             title: "Backend Developer",
             subtitle: "Careescapes AI",
-            description: " Developed a secure, role-based backend system for a clinic management platform using FastAPI, PostgreSQL, and Clerk Auth. Collaborated in an agile team to integrate APIs with a Next.js frontend, improving admin task efficiency by 40% and reducing unauthorized access by 50%. "
+            description: " Developed a cloud-native AI platform that streamlined HR workflows from job posting to candidate screening - using microservices, vector search, and real-time analytics. "
         },
         {
             date: "Sep 2024 - Jun 2026",
             title: "Northeastern University",
             subtitle: "Master's in Applied Machine Intelligence",
-            description: "Currently pursuing a graduate degree in Applied Machine Intelligence with a focus on advanced ML techniques, natural language processing, and computer vision. GPA: 3.93"
+            description: "Currently pursuing a graduate degree in Applied Machine Intelligence with a focus on advanced ML techniques, natural language processing, and computer vision. GPA: 3.94"
         },
         {
             date: "Jul 2023 - Sep 2023",
             title: "Machine Learning Intern",
             subtitle: "Prinston Smart Engineers",
-            description: " Built and deployed a credit risk prediction model using RFE and feature engineering, integrated via a Dockerized Flask API. Worked with cross-functional teams to enhance loan approval accuracy by 20% and reduce model iteration time by 30%."
+            description: "Built production-ready ML pipelines (including feature engineering and model deployment) for loan approval prediction, improving accuracy by 20% and reducing manual processing time."
         },
         {
             date: "Dec 2020 - May 2024",
